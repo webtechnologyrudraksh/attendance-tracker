@@ -7,85 +7,134 @@
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f5d0fe);
+    background: linear-gradient(135deg, #dbeafe, #e0e7ff, #fce7f3);
     color: #1e293b;
     padding: 30px 15px;
 }
 
-/* Main heading */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Heading */
 h1 {
     text-align: center;
-    font-size: 38px;
     color: #1e3a8a;
+    font-size: 40px;
     margin-bottom: 8px;
 }
 
-h2, h3, h4 {
-    color: #1e3a8a;
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
 }
 
-/* Main containers/cards */
-.container,
-section,
-.add-subject,
-.subject-card {
-    background: rgba(255, 255, 255, 0.88);
-    border-radius: 18px;
+/* Overall attendance */
+.overall-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 28px;
+    border-radius: 20px;
+    text-align: center;
     box-shadow: 0 10px 30px rgba(30, 58, 138, 0.12);
-    backdrop-filter: blur(8px);
+    margin-bottom: 20px;
 }
 
-/* Add subject area */
+.overall-box h2 {
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+#overallAttendance {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+    margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Add Subject */
 .add-subject {
+    background: rgba(255, 255, 255, 0.92);
     padding: 25px;
-    margin: 25px auto;
-    max-width: 900px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+    margin: 25px 0;
 }
 
-input {
+.add-subject h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+#subjectName {
     width: 70%;
-    padding: 13px 16px;
+    padding: 13px 15px;
     border: 2px solid #c7d2fe;
     border-radius: 10px;
-    outline: none;
     font-size: 16px;
+    outline: none;
 }
 
-input:focus {
+#subjectName:focus {
     border-color: #6366f1;
 }
 
 /* Buttons */
 button {
     border: none;
+    padding: 12px 18px;
     border-radius: 10px;
-    padding: 11px 18px;
-    margin: 5px;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background: #2563eb;
     transition: 0.2s;
 }
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Subject cards */
+/* Subject cards created by JavaScript */
 .subject-card {
-    padding: 22px;
-    margin: 18px auto;
-    max-width: 900px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
 }
 
 .subject-card h3 {
-    font-size: 22px;
+    color: #1e3a8a;
+    font-size: 23px;
     margin-bottom: 10px;
 }
 
 .subject-card h2 {
-    font-size: 28px;
+    color: #2563eb;
     margin-bottom: 10px;
 }
 
@@ -105,32 +154,36 @@ button:hover {
     transition: width 0.4s ease;
 }
 
-/* Attendance buttons */
-.subject-card button:nth-last-child(3) {
-    background: #16a34a;
-}
-
-.subject-card button:nth-last-child(2) {
-    background: #ef4444;
-}
-
-.subject-card button:last-child {
-    background: #3b82f6;
-}
-
-/* Attendance history */
-.attendance-history {
+/* History */
+.history {
     background: #f8fafc;
-    padding: 12px;
-    border-radius: 10px;
-    margin-top: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
 }
 
-.attendance-history p {
+.history p {
     margin: 6px 0;
 }
 
-/* Responsive for phone */
+/* Subject buttons */
+.subject-card button {
+    margin: 5px 5px 0 0;
+}
+
+.subject-card button:first-of-type {
+    background: #16a34a;
+}
+
+.subject-card button:nth-of-type(2) {
+    background: #ef4444;
+}
+
+.subject-card button:nth-of-type(3) {
+    background: #3b82f6;
+}
+
+/* Mobile */
 @media (max-width: 600px) {
 
     body {
@@ -141,13 +194,17 @@ button:hover {
         font-size: 30px;
     }
 
-    input {
+    #subjectName {
         width: 100%;
         margin-bottom: 10px;
     }
 
-    button {
-        padding: 10px 14px;
+    .add-subject button {
+        width: 100%;
+    }
+
+    .dashboard-card {
+        padding: 18px;
     }
 
     .subject-card {
