@@ -156,6 +156,8 @@ function deleteSubject(index) {
 
 function showSubjects() {
 
+renderHistory();
+
     let container = document.getElementById("subjectsContainer");
 
     container.innerHTML = "";
@@ -661,4 +663,53 @@ new QRCode(document.getElementById("qrcode"), {
     width: 180,
     height: 180
 });
+function renderHistory() {
+
+    let historyContainer = document.getElementById("historyContainer");
+
+    if (!historyContainer) {
+        return;
+    }
+
+    if (attendanceHistory.length === 0) {
+
+        historyContainer.innerHTML = `
+            <p class="no-history">
+                No attendance history yet.
+            </p>
+        `;
+
+        return;
+    }
+
+    let recentHistory = attendanceHistory
+        .slice()
+        .reverse()
+        .slice(0, 10);
+
+    historyContainer.innerHTML = recentHistory.map(function(item) {
+
+        let icon = item.type === "Present" ? "✅" : "❌";
+
+        return `
+            <div class="history-item">
+
+                <div class="history-item-icon">
+                    ${icon}
+                </div>
+
+                <div class="history-item-info">
+                    <strong>${item.subject}</strong>
+                    <span>${item.type}</span>
+                </div>
+
+                <div class="history-item-date">
+                    ${item.date}
+                </div>
+
+            </div>
+        `;
+
+    }).join("");
+}
 

@@ -9,10 +9,159 @@
 </head>
 
 <body>
+    <!-- ================= PROFESSIONAL NAVBAR ================= -->
+
+<header class="site-header">
+    <nav class="navbar">
+
+        <a href="#home" class="brand">
+            <span class="brand-icon">📊</span>
+            <span>Attendance Tracker</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#history">History</a>
+            <a href="#profile">Profile</a>
+        </div>
+
+        <a href="#dashboard" class="nav-cta">
+            Open Tracker
+        </a>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero-section" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            🎓 SMART ATTENDANCE MANAGEMENT
+        </span>
+
+        <h1>
+            Stay on top of your
+            <span>attendance.</span>
+        </h1>
+
+        <p>
+            Track every class, monitor your attendance,
+            and know exactly how many classes you need
+            to attend to reach your target.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#dashboard" class="hero-btn primary">
+                Open Dashboard →
+            </a>
+
+            <a href="#subjects" class="hero-btn secondary">
+                View Subjects
+            </a>
+
+        </div>
+
+        <div class="hero-features">
+
+            <div>
+                <strong>75%</strong>
+                <span>Target Tracking</span>
+            </div>
+
+            <div>
+                <strong>📚</strong>
+                <span>All Subjects</span>
+            </div>
+
+            <div>
+                <strong>📈</strong>
+                <span>Live Progress</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO PREVIEW CARD -->
+
+    <div class="hero-preview">
+
+        <div class="preview-top">
+            <div>
+                <small>Overall Attendance</small>
+                <h2>82.50%</h2>
+            </div>
+
+            <span class="preview-status">Good</span>
+        </div>
+
+        <div class="preview-progress">
+            <div class="preview-progress-fill"></div>
+        </div>
+
+        <div class="preview-stats">
+
+            <div>
+                <span>📚</span>
+                <strong>6</strong>
+                <small>Subjects</small>
+            </div>
+
+            <div>
+                <span>✅</span>
+                <strong>5</strong>
+                <small>On Track</small>
+            </div>
+
+            <div>
+                <span>⚠️</span>
+                <strong>1</strong>
+                <small>Attention</small>
+            </div>
+
+        </div>
+
+        <div class="preview-subject">
+
+            <div class="subject-preview-info">
+                <strong>Data Structures</strong>
+                <span>85%</span>
+            </div>
+
+            <div class="mini-progress">
+                <div style="width:85%"></div>
+            </div>
+
+        </div>
+
+        <div class="preview-subject">
+
+            <div class="subject-preview-info">
+                <strong>Database Management</strong>
+                <span>72%</span>
+            </div>
+
+            <div class="mini-progress">
+                <div style="width:72%"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     <div class="container">
         <h1>Attendance Tracker</h1>
         <p class="subtitle">Track your attendance easily</p>
-        <div class="student-profile">
+        <div class="student-profile" id="profile"> 
 
     <div class="profile-icon" id="profilePreview">
         👨‍🎓
@@ -94,8 +243,7 @@
 
 </div>
       <!-- Attendance Dashboard -->
-<div class="attendance-dashboard">
-
+<div class="attendance-dashboard" id="dashboard">
     <div class="overall-box">
         <div class="overall-header">
             <div>
@@ -145,7 +293,7 @@
     </div>
 
 </div>
-<div class="add-subject"> 
+<div class="add-subject" id="subjects">
     <h2>Add Subject</h2>
 
     <input type="text" id="subjectName" placeholder="Subject Name">
@@ -156,7 +304,28 @@
         <!--Subjects will appear here-->
     </div>
 
-    
+
+<!-- ================= ATTENDANCE HISTORY ================= -->
+
+<section class="history-section" id="history">
+
+    <div class="history-header">
+        <span class="section-label">ATTENDANCE ACTIVITY</span>
+        <h2>Attendance History</h2>
+        <p>See your recent attendance activity at a glance.</p>
+    </div>
+
+    <div class="history-card">
+
+        <div id="historyContainer">
+            <p class="no-history">
+                No attendance history yet.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 <footer class="site-footer">
     <p>Made with ❤️ by Rudraksh Pathak</p>
