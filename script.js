@@ -223,14 +223,14 @@ if (percentage < 75) {
 <p>
     ${
         canMiss > 0
-        ? "You can miss " + canMiss + " more class(es)"
+        ? "You can miss " + canMiss + " more classes"
         : "⚠️ Don't miss the next class"
     }
 </p>
-<p>
+<p class="attendance-target">
     ${
-        percentage < 75
-        ? "📈 Attend next " + needToAttend + " class(es) to reach 75%"
+        needToAttend > 0
+        ? `Attend next ${needToAttend} classes to reach 75%`
         : ""
     }
 </p>
