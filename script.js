@@ -656,5 +656,9 @@ document.getElementById("branchName").innerHTML =
 }
 
 }
-
+new QRCode(document.getElementById("qrcode"), {
+    text: "https://webtechnologyrudraksh.github.io/attendance-tracker/",
+    width: 180,
+    height: 180
+});
 
