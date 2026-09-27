@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendence Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Attendance Tracker</h1>
+        <p class="subtitle">Track your attendance easily</p>
+        <div class="student-profile">
+
+    <div class="profile-icon" id="profilePreview">
+        👨‍🎓
+    </div>
+
+    <div class="student-info">
+        <h2 id="displayName">Student Name</h2>
+
+        <p>
+            <strong>College:</strong>
+            <span id="displayCollege">Your College</span>
+        </p>
+
+        <p>
+            <strong>Course:</strong>
+            <span id="displayCourse">Your Course</span>
+        </p>
+
+        <p>
+            <strong>Semester:</strong>
+            <span id="displaySemester">Your Semester</span>
+        </p>
+
+<p id="displayBranchRow"><strong>Branch:</strong> <span id="displayBranch"></span></p>
+    </div>
+
+</div>
+
+<div class="profile-form">
+
+    <h3>✏️ Edit Student Profile</h3>
+
+    <input type="text" id="studentName" placeholder="Student Name">
+
+    <input type="text" id="collegeName" placeholder="College Name">
+
+<select id="courseCategory" onchange="loadCourses()">
+    <option value="">Select Category</option>
+    <option value="engineering">Engineering & Technology</option>
+    <option value="computer">Computer & IT</option>
+    <option value="management">Management</option>
+    <option value="commerce">Commerce</option>
+    <option value="medical">Medical & Healthcare</option>
+    <option value="science">Pure Science</option>
+    <option value="humanities">Humanities</option>
+    <option value="general">General Degrees</option>
+    <option value="design">Design & Architecture</option>
+    <option value="education">Teaching & Education</option>
+    <option value="law">Law</option>
+    <option value="agriculture">Agriculture</option>
+    <option value="media">Media & Journalism</option>
+    <option value="hotel">Hotel Management & Tourism</option>
+</select>
+
+<select id="courseName" onchange="toggleBranch()">
+    <option value="">Select Course</option>
+</select>
+
+<div id="branchContainer" style="display: none;">
+    <select id="branchName">
+        <option value="">Select Branch / Specialization</option>
+    </select>
+</div>
+
+<select id="semesterName">
+    <option value="">Select Semester</option>
+    <option value="I">I Semester</option>
+    <option value="II">II Semester</option>
+    <option value="III">III Semester</option>
+    <option value="IV">IV Semester</option>
+    <option value="V">V Semester</option>
+    <option value="VI">VI Semester</option>
+    <option value="VII">VII Semester</option>
+    <option value="VIII">VIII Semester</option>
+</select>
+    <input type="file" id="profilePhoto" accept="image/*">
+
+    <button onclick="saveProfile()">Save Profile</button>
+
+</div>
+        <div class="overall-box">
+            <h2>Overall Attendance</h2>
+            <div id="overallAttendance">0%</div>
+        </div>
+
+        <div class="dashboard-card">
+                <h3>Total Subjects</h3>
+                <p id="totalSubjects">0</p>
+            </div>
+
+        
+
+<div class="dashboard-card">
+    <h3>Good Attendance</h3>
+    <p id="goodSubjects">0</p>
+</div>
+
+<div class="dashboard-card">
+    <h3>Needs Attention</h3>
+    <p id="lowSubjects">0</p>
+</div>
+
+<div class="add-subject"> 
+    <h2>Add Subject</h2>
+
+    <input type="text" id="subjectName" placeholder="Subject Name">
+    <button onclick="addSubject()">Add Subject</button>
+    </div>
+
+    <div id="subjectsContainer">
+        <!--Subjects will appear here-->
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
