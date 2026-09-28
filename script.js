@@ -275,7 +275,7 @@ function updateOverall() {
     if (totalClasses > 0) {
         overall = (totalPresent / totalClasses) * 100;
     }
-    
+
     document.getElementById("heroOverall").textContent = overall.toFixed(2) + "%"; 
 
 document.getElementById("totalSubjects").textContent = subjects.length;
@@ -296,6 +296,9 @@ subjects.forEach(function(subject) {
 
 document.getElementById("goodSubjects").textContent = goodCount;
 document.getElementById("lowSubjects").textContent = lowCount;
+document.getElementById("heroSubjects").textContent = subjects.length;
+document.getElementById("heroGood").textContent = goodCount;
+document.getElementById("heroAttention").textContent = lowCount;
     document.getElementById("overallAttendance").innerText =
         overall.toFixed(2) + "%";
 }
