@@ -275,6 +275,9 @@ function updateOverall() {
     if (totalClasses > 0) {
         overall = (totalPresent / totalClasses) * 100;
     }
+    
+    document.getElementById("heroOverall").textContent = overall.toFixed(2) + "%"; 
+
 document.getElementById("totalSubjects").textContent = subjects.length;
 
 let goodCount = 0;
