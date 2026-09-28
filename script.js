@@ -712,4 +712,10 @@ function renderHistory() {
 
     }).join("");
 }
+function startFresh() {
+    localStorage.removeItem("attendanceData");
+    localStorage.removeItem("attendanceHistory");
+    localStorage.removeItem("studentProfile");
 
+    location.reload();
+}
